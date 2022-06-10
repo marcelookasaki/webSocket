@@ -1,0 +1,18 @@
+<html>
+
+<body>
+  Alo cliente WEB SOCKET
+  <script>
+    const ws = new WebSocket('ws://localhost:8080');
+    ws.addEventListener('open', () => {
+      console.log('Teste de conexão do cliente');
+      ws.send('Enviando dados para o servidor');
+    });
+    ws.addEventListener('message', function (event) {
+      console.log(event.data);
+    });
+
+  </script>
+</body>
+
+</html>
